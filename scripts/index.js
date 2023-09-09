@@ -1,21 +1,23 @@
-const BURGER_CLASS = 'burger';
+var BURGER_CLASS = 'burger';
 
-const burgerMenu = document.getElementsByClassName('burger')[0]
-const closeBurger = document.getElementsByClassName('burger__close-button')[0]
-const openBurger = document.getElementsByClassName('burger__button')[0];
-let isBurgerOpened = false;
+var burgerMenu = document.getElementsByClassName('burger')[0];
+var closeBurger = document.getElementsByClassName('burger__close-button')[0];
+var openBurger = document.getElementsByClassName('burger__button')[0];
+var isBurgerOpened = false;
 
-const toggleBurger =() => {
-    burgerMenu.classList = isBurgerOpened ?  `${BURGER_CLASS} closed` : `${BURGER_CLASS} open`; 
+function toggleBurger() {
+    if (isBurgerOpened) {
+        burgerMenu.className = BURGER_CLASS + ' closed';
+    } else {
+        burgerMenu.className = BURGER_CLASS + ' open';
+    }
     isBurgerOpened = !isBurgerOpened;
 }
 
-closeBurger.addEventListener('click', ()=>{
+closeBurger.addEventListener('click', function() {
     toggleBurger();
-})
+});
 
-openBurger.addEventListener('click', ()=>{
+openBurger.addEventListener('click', function() {
     toggleBurger();
-})
-
-
+});

@@ -1,0 +1,112 @@
+/*
+    COMMON
+*/
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+._container{
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+._ibg{
+    position: relative;
+}
+
+._ibg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    object-fit: cover;
+}
+
+.hidden{
+    display: none;
+}
+
+.button{
+    color: white;
+    background-color: #C1A55C;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button-empty{
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+/* MENU */
+
+.menu__list{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;   
+}
+
+.menu__item{
+    padding: 10px;
+}
+
+.menu__item:hover{
+    background-color: rgb(211, 211, 211, 30%);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.menu__item{
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* CONTACT */
+
+.contact__value{
+    margin-left: 8.7px;
+    min-width: 190px;
+}
+
+@media (width <= 1440px){
+    .contact__value{
+        display: none;
+    }
+}
+
+.bouncing{
+    animation:  bounce  0.8s ease-in forwards;  
+}
+
+.bouncing-hover:hover{
+    animation:  bounce  0.8s ease-in forwards;  
+}
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-6px);
+		-ms-transform:     translateY(-6px);
+		transform:         translateY(-6px)
+	}
+	60% {
+		-webkit-transform: translateY(-3px);
+		-ms-transform:     translateY(-3px);
+		transform:         translateY(-3px)
+	}
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Arkhip;
+    src: url('../fonts/Arkhip_font.eot');
+    src:local(''), url('../fonts/Arkhip_font.otf') format('otf'),
+    url('../fonts/Arkhip_font.woff') format('woff'),
+    url('../fonts/Arkhip_font.ttf') format('ttf'),
+    url('../fonts/Arkhip_font.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+

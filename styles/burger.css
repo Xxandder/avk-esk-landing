@@ -1,0 +1,104 @@
+/* BOORGER */
+.burger{
+    padding: 30px 30px;
+    height: 100vh;
+    
+    max-width: 350px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: lightgray;
+    color: black;
+    z-index: 50;
+}
+
+.open{
+    animation: slide-in 0.5s ease-in forwards;
+}
+
+.closed{
+    animation:  slide-out  0.1s ease-in forwards;
+}
+
+.burger__close-button{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+}
+
+.burger__menu .menu__list{
+    flex-direction: column;
+    gap: 40px;
+}
+
+.burger__menu .menu__list .menu__item{
+    font-size: 30px;
+}
+
+.burger__menu .menu__item{
+    position: relative;
+    width: max-content;
+}
+
+.burger__menu .menu__item::after{
+    content: '';
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+}
+
+.burger__menu .menu__item:hover::after{
+    animation: underline-appear 0.5s ease-in-out forwards;
+}
+
+.burger__contacts{
+    position: absolute;
+    bottom: 20px;
+}
+
+.burger__contact{
+    display: flex;
+    align-items: center;
+}
+
+.burger__contact .contact__value{
+    display: block;
+}
+
+@media (width < 892px){
+    .burger__button{
+        display: block;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        width: 30%;
+        display: block;
+    }
+    100% {
+        width: 100%; 
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        width: 60%;
+    }
+    100% {
+        width: 0%; 
+        display: none;
+    }
+}
+
+@keyframes underline-appear {
+    0% {
+       width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}

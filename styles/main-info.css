@@ -1,0 +1,125 @@
+.main-info{
+    padding: 210px 0 ;
+    position: relative;
+}
+
+.main-info__header{
+    color: #FAFAFA;
+font-family: Arkhip;
+font-size: 60px;
+font-style: normal;
+font-weight: 400;
+line-height: 1;
+letter-spacing: -3px;
+max-width: 822px;
+}
+
+.main-info__header span{
+    color: #C1A55C;
+}
+
+.main-info__text{
+    margin-top: 24px;
+    max-width: 870px;
+    color: #FAFAFA;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+.main-info__image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0; 
+        z-index: -1;
+        object-fit: cover;
+}
+
+
+.main-info__image img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    object-fit: cover;
+    object-position: right;
+}
+
+.main-info__buttons{
+    margin-top: 64px;
+    margin-left: -40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: max-content;
+ 
+}
+
+.main-info__button{
+    padding: 33px 15px;
+    font-size: 22px;
+    margin-left: 40px;
+}
+
+.main-info__button:hover{
+    background-color: rgb(255, 227, 157);
+    color: black;
+}
+
+@media (width < 776px){
+    .main-info__buttons{
+        grid-template-columns: 1fr;
+        min-width: 70%;
+        margin-top: 15px;  
+    }
+    .main-info__button{
+        margin-top: 20px; 
+        padding: 30px 10px;
+    }
+    .main-info__header{
+        font-size: 45px;
+    }
+    .main-info__text{
+        font-size: 18px;
+    }
+    .main-info__button{
+        font-size: 16px;
+        padding: 25px;
+        
+    }
+}
+
+@media (width < 1112px){
+    .main-info{
+        padding: 70px 0;
+    }
+  
+}
+
+@media (width < 562px){
+    .main-info{
+        padding: 30px 0;
+    }
+    .main-info__text{
+        display: none;
+    }
+    .main-info__header{
+        font-size: 40px;
+    }
+}
+
+@media (width < 400px){
+    .main-info__header{
+        font-size: 35px;
+    }
+    
+    .header svg{
+        transform: scale(0.8);
+    }
+}
